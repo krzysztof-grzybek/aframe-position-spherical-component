@@ -1,0 +1,33 @@
+{
+  "name": "aframe-position-spherical-component",
+  "version": "0.1.0",
+  "description": "Simple utility to position entity with spherical coordinate system",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krzysztof-grzybek/aframe-position-spherical-component.git"
+  },
+  "keywords": [
+    "aframe",
+    "spherical",
+    "coordinates",
+    "position",
+    "component"
+  ],
+  "author": "krzysztof.grzybek89@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krzysztof-grzybek/aframe-position-spherical-component/issues"
+  },
+  "homepage": "https://github.com/krzysztof-grzybek/aframe-position-spherical-component#readme",
+  "devDependencies": {
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.4",
+    "webpack-dev-server": "^3.1.4"
+  }
+}
