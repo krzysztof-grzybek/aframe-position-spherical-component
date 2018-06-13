@@ -1,10 +1,10 @@
-console.log('asdf')
 if (typeof AFRAME === 'undefined') {
   throw new Error('Component attempted to register before AFRAME was available.');
 }
+
 AFRAME.registerComponent('position-spherical', {
   schema: {
-    default: [0, 0, 0],
+    default: [0, 0, 0], // radius, phi, theta
 
     parse: function (value) {
       if (Array.isArray(value)) {

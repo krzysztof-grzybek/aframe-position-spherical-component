@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example</title>
+    <script src="../dist/example.js"></script>
+</head>
+<body>
+
+<a-scene>
+    <a-assets>
+        <img id="sky" src="./space.jpg">
+
+        <a-asset-item id="earth-obj" src="./earth.obj"></a-asset-item>
+        <a-asset-item id="earth-mtl" src="./earth.mtl"></a-asset-item>
+    </a-assets>
+    <a-sky src="#sky"></a-sky>
+    <a-entity earth obj-model="obj: #earth-obj; mtl: #earth-mtl" position-spherical="8 1.57 3.14"></a-entity>
+</a-scene>
+
+</body>
+</html>
