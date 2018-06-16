@@ -8,16 +8,17 @@
 <body>
 
 <a-scene>
+
     <a-assets>
         <img id="sky" src="./space.jpg">
-
         <a-asset-item id="earth-obj" src="./earth.obj"></a-asset-item>
         <a-asset-item id="earth-mtl" src="./earth.mtl"></a-asset-item>
     </a-assets>
+
     <a-sky src="#sky" repeat="4 4"></a-sky>
     <a-entity earth obj-model="obj: #earth-obj; mtl: #earth-mtl" position-spherical="8 1.57 3.14" rotation="0 0 0"></a-entity>
+    <a-entity light="type: point; color: #fff; intensity: 2" position="0 0 0"></a-entity>
 
-    <!--<a-entity light="type: spot; color: #fff; intensity: 2" position="-4 6 -1"></a-entity>-->
 </a-scene>
 
 </body>
