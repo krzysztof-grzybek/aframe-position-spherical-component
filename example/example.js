@@ -2,15 +2,15 @@ require('aframe');
 require('../index');
 
 AFRAME.registerComponent('earth', {
-  init: function() {
-    this.initialPosition = [12, 1.57, 3.14];
-    this.initialRotation = [0, 0, 0];
-  },
 
   tick: function() {
-    this.initialPosition[2] += 0.005;
-    this.initialRotation[0] -= 0.05;
-    this.el.setAttribute('position-spherical', this.initialPosition.join(' '));
-    this.el.setAttribute('rotation', this.initialRotation.join(' '));
+    this.position.theta += 0.1;
+    this.rotation.y += 0.003;
+    this.el.setAttribute('position-spherical', this.position);
+    this.el.object3D.rotation.set(this.rotation.x, this.rotation.y, this.rotation.z);
+  },
+  init: function() {
+    this.position = { radius: 12, phi: 90, theta: 180 };
+    this.rotation = { x: 0, y: 0, z: 0 };
   }
-})
+});

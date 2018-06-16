@@ -4,18 +4,32 @@ if (typeof AFRAME === 'undefined') {
 
 AFRAME.registerComponent('position-spherical', {
   schema: {
-    default: [0, 0, 0], // radius, phi, theta
+    default: { radius: 0, phi: 0, theta: 0 },
 
     parse: function (value) {
-      if (Array.isArray(value)) {
+      if (typeof value === 'object') {
         return value;
       }
 
-      return value.trim().replace(/\s+/g, ' ').split(' ');
+      return value.trim()
+        .replace(/\s+/g, ' ')
+        .split(' ')
+        .reduce(function(acc, curr, i) {
+          switch(i) {
+            case 0: acc.radius = curr;
+            break;
+            case 1: acc.phi = curr;
+            break
+            case 2: acc.theta = curr;
+            break;
+          }
+
+          return acc;
+        }, {});
     },
 
     stringify: function (data) {
-      return data.join(' ');
+      return data.radius + ' ' + data.phi + ' ' + data.theta;
     }
   },
 
@@ -24,12 +38,12 @@ AFRAME.registerComponent('position-spherical', {
   },
 
   setPosition: function() {
-    var spherical = new THREE.Spherical();
+    var spherical = new THREE.Spherical(
+      this.data.radius,
+      THREE.Math.degToRad(this.data.phi),
+      THREE.Math.degToRad(this.data.theta)
+    );
     var vector = new THREE.Vector3();
-
-    spherical.radius = this.data[0];
-    spherical.phi = this.data[1];
-    spherical.theta = this.data[2];
 
     vector.setFromSpherical(spherical);
 
