@@ -1,1 +1,1 @@
-console.log('zona mnie nie drapie');
+console.log('test');
