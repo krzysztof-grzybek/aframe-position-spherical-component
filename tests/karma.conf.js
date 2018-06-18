@@ -1,25 +1,19 @@
-var path = require('path');
-
 module.exports = function (config) {
 
   config.set({
     basePath: '../',
+    port: 3001,
     files: [
       'tests/index.test.js',
     ],
     browsers: ['Chrome', 'Firefox'],
     preprocessors: {
-      'tests/index.test.js': ['webpack', 'sourcemap' ],
+      'tests/index.test.js': ['webpack'],
     },
     webpack: {
-      mode: process.env.NODE_ENV,
+      mode: 'development',
       devtool: 'inline-source-map',
     },
-    plugins: [
-      'karma-chrome-launcher',
-      'karma-firefox-launcher',
-      'karma-webpack',
-      'karma-sourcemap-loader'
-    ]
+    frameworks: ['mocha']
   });
 };
