@@ -6,14 +6,18 @@ module.exports = function (config) {
     files: [
       'tests/index.test.js',
     ],
-    browsers: ['Chrome', 'Firefox'],
     preprocessors: {
       'tests/index.test.js': ['webpack'],
     },
+    frameworks: ['mocha'],
+    browsers: ['Chrome', 'Firefox'],
     webpack: {
       mode: 'development',
       devtool: 'inline-source-map',
     },
-    frameworks: ['mocha']
+    client: {
+      mocha: { ui: 'tdd' },
+    },
+    reporters: ['mocha']
   });
 };
