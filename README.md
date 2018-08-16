@@ -26,7 +26,7 @@ box.setAttribute('position-spherical', { radius: 12, phi: 90, theta: 45 });
 | Type              | Description                                                                                                                                   |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
 | string            | String in format: `${radius} ${phi} ${theta}`.                                                                                                |
-| custom | Object with coordinates properties: <ul><li>`radius: number` - distance in meters</li><li>`phi: number` - phi angle in degrees</li><li>`theta: number` - theta angle in degrees</li></ul> |
+| custom | Object with coordinates properties: <ul><li>`radius: number` - distance in meters</li><li>`phi: number` - polar angle from the y axis in degrees</li><li>`theta: number` - equator angle around the y axis in degrees</li></ul> |
 
 ### Example
 
