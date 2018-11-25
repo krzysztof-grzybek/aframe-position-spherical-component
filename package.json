@@ -1,6 +1,6 @@
 {
   "name": "aframe-position-spherical-component",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Simple utility to position entity with spherical coordinate system",
   "main": "index.js",
   "scripts": {
@@ -39,6 +39,6 @@
     "mocha": "^5.2.0",
     "webpack": "^4.12.0",
     "webpack-cli": "^3.0.4",
-    "webpack-dev-server": "^3.1.4"
+    "webpack-dev-server": "^3.1.10"
   }
 }
