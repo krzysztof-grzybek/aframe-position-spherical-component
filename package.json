@@ -1,6 +1,6 @@
 {
   "name": "aframe-position-spherical-component",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Simple utility to position entity with spherical coordinate system",
   "main": "index.js",
   "scripts": {
@@ -25,12 +25,14 @@
     "url": "https://github.com/krzysztof-grzybek/aframe-position-spherical-component/issues"
   },
   "homepage": "https://github.com/krzysztof-grzybek/aframe-position-spherical-component#readme",
+  "peerDependencies": {
+    "aframe": "^0.8.2"
+  },
   "devDependencies": {
-    "aframe": "^0.8.2",
     "async-for-each": "^1.0.1",
     "chai": "^4.1.2",
     "chai-shallow-deep-equal": "^1.4.6",
-    "karma": "^2.0.3",
+    "karma": "^3.1.1",
     "karma-chrome-launcher": "^2.2.0",
     "karma-firefox-launcher": "^1.1.0",
     "karma-mocha": "^1.3.0",
